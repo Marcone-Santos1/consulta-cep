@@ -33,7 +33,7 @@ class Search
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
-            CURLOPT_URL => 'http://viacep.com.br/ws/' . $zipCode . '/json',
+            CURLOPT_URL => $this->url . $zipCode . '/json',
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => '',
             CURLOPT_MAXREDIRS => 10,
